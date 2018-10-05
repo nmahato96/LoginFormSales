@@ -48,10 +48,11 @@ error_reporting(0);
 	    ";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "<script>alert('Records Submitted Successfully!');window.location.href='http://localhost/LoginFormSales/SalesSheetTab.php'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
+
 ?>
